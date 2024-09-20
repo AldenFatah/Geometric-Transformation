@@ -29,8 +29,3 @@ def mirror(x,y,isinfinite,m=0,c=0):
 
 #print(s)
 print("")
-print(transform(12,35,67,4))
-print(dilate(3,4,2))
-print(rotate(12,2,90,1,1))
-print(linear(2,3,5))
-print(mirror(1,0,False,1,0))
