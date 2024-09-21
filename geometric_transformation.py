@@ -27,5 +27,7 @@ def mirror(x,y,isinfinite,m=0,c=0):
         newy = linear(m,ctwo,newx)
         return [newx,newy]
 
-#print(s)
-print("")
+#logics
+end = bool
+while end != True:
+    pass
