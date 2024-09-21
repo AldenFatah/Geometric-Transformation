@@ -31,7 +31,7 @@ def mirror(x,y,isinfinite,m=0,c=0):
         return [newx,newy]
 
 #logics
-end = bool
+end = False
 while end != True:
     transfomation = input(
         """choose a transformation
