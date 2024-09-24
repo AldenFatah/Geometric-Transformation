@@ -5,6 +5,12 @@ import math
 def int_input(a):
     return int(input(a))
 
+def str_to_bool(str):
+    if str == true:
+        return True
+    else:
+        return False
+
 def transform(x,y,a,b):
     return [x+a,y+b]
 
@@ -50,6 +56,6 @@ while end != True:
         case '3':
             print(rotate(int_input('x:'),int_input('y:'),int_input('deg:'),int_input('a:'),int_input('b:')))
         case '4':
-            print(mirror(int_input('x:'),int_input('y:'),bool(input('is m infinite?(true/false)')),int_input('m:'),int_input('c:')))
+            print(mirror(int_input('x:'),int_input('y:'),str_to_bool(input('is m infinite?(true/false)')),int_input('m:'),int_input('c:')))
         case _:
             end = True
