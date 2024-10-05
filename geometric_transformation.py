@@ -5,12 +5,6 @@ import math
 def int_input(a):
     return int(input(a))
 
-def str_to_bool(str):
-    if str == true:
-        return True
-    else:
-        return False
-
 def transform(x,y,a,b):
     return [x+a,y+b]
 
@@ -25,16 +19,10 @@ def rotate(x,y,deg,a=0,b=0):
     x,y = transform(x,y,-a,-b)
     return [round((x*math.cos(deg))-(y*math.sin(deg))+a,10),round((x*math.sin(deg))+(y*math.cos(deg))+b,10)]
 
-def mirror(x,y,isinfinite,m=0,c=0):
-    if isinfinite == True:
-        return [-x,y]
-    elif m==0:
-        return [y,x]
-    else:
-        ctwo = 2*c + m*x -y
-        newx = (x + m*(y-ctwo))/(m**2 + 1)
-        newy = linear(m,ctwo,newx)
-        return [newx,newy]
+def mirror(x,y,a,b,c):
+    newx = ((((b*b)-(a*a))*x)-(2*a*b*y)+(2*a*c))/((a*a)+(b*b))
+    newy = ((((a*a)-(b*b))*y)-(2*a*b*x)+(2*b*c))/((a*a)+(b*b))
+    return [newx,newy]
 
 #logics
 end = False
@@ -56,6 +44,6 @@ while end != True:
         case '3':
             print(rotate(int_input('x:'),int_input('y:'),int_input('deg:'),int_input('a:'),int_input('b:')))
         case '4':
-            print(mirror(int_input('x:'),int_input('y:'),str_to_bool(input('is m infinite?(true/false)')),int_input('m:'),int_input('c:')))
+            print(mirror())
         case _:
             end = True
