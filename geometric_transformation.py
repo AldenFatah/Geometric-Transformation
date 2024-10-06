@@ -26,24 +26,20 @@ def mirror(x,y,a,b,c):
 
 #logics
 end = False
-while end != True:
-    transfomation = input(
-        """choose a transformation
-        1.transform
-        2.dilate
-        3.rotate
-        4.mirror
-        5.end
-        use the numbers
-        :""")
+while end == True:
+    transfomation = input("choose a transformation:\n1.transform\n2.dilate\n3.rotate\n4.mirror\n5.end\nuse the numbers\n:")
     match transfomation:
         case '1':
+            print("A point (x,y) trasformed by a vector (a,b)")
             print(transform(int_input('x:'),int_input('y:'),int_input('a:'),int_input('b:')))
         case '2':
+            print("A point (x,y) dilated by a number (c)")
             print(dilate(int_input('x:'),int_input('y:'),int_input('c:')))
         case '3':
+            print("A point (x,y) rotated by (deg) degrres from the center (a,b)")
             print(rotate(int_input('x:'),int_input('y:'),int_input('deg:'),int_input('a:'),int_input('b:')))
         case '4':
-            print(mirror())
+            print("A point (x,y) mirrored trough a line (ax + by = c)")
+            print(mirror(int_input('x:'),int_input('y:'),int_input('a:'),int_input('b:'),int_input('c:')))
         case _:
             end = True
