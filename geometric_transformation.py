@@ -26,7 +26,7 @@ def mirror(x,y,a,b,c):
 
 #logics
 end = False
-while end == True:
+while end == False:
     transfomation = input("choose a transformation:\n1.transform\n2.dilate\n3.rotate\n4.mirror\n5.end\nuse the numbers\n:")
     match transfomation:
         case '1':
@@ -36,7 +36,7 @@ while end == True:
             print("A point (x,y) dilated by a number (c)")
             print(dilate(int_input('x:'),int_input('y:'),int_input('c:')))
         case '3':
-            print("A point (x,y) rotated by (deg) degrres from the center (a,b)")
+            print("A point (x,y) rotated by (deg) degrres counter clockwise from the center (a,b)")
             print(rotate(int_input('x:'),int_input('y:'),int_input('deg:'),int_input('a:'),int_input('b:')))
         case '4':
             print("A point (x,y) mirrored trough a line (ax + by = c)")
